@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListService {
+
     public static List<Integer> getNumbers(List<String> numbersList){
         List<Integer> numbers = new ArrayList<>();
         numbersList.stream()
@@ -13,7 +14,8 @@ public class ListService {
                             numbers.add(Integer.parseInt(string.charAt(i) + ""));
                     }
                     return numbers;
-                }).count();
+                })
+                .count();
         return numbers;
     }
 }
